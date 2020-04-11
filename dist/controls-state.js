@@ -554,8 +554,8 @@
 	      for (var i = 0; i < updateKeys.length; i++) {
 	        var event = this.batchedUpdates[updateKeys[i]];
 	        var path = this.batchUpdatePaths.pop();
-	        this.events.emit('change', event);
-	        this.events.emit('change:' + path, event);
+	        this.events.emit('change', event.value);
+	        this.events.emit('change:' + path, event.value);
 	      }
 	    }
 	    this.batchedUpdates = {};
